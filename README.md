@@ -1,4 +1,4 @@
-#Algoritmo
+##Algoritmo
 
 - Se pide el nombre del archivo a inspeccionar.-> MainClass
 
