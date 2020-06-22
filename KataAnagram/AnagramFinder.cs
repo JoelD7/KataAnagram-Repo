@@ -26,6 +26,7 @@ namespace KataAnagram
                 Console.Write("Please input the correct path: ");
                 AnagramFinder anagramFinder2 = new AnagramFinder();
                 string path = Console.ReadLine();
+                Console.WriteLine();
                 return anagramFinder2.FileReader(@path);
             }
             return anagramsGroup;
