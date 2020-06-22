@@ -9,8 +9,9 @@ namespace KataAnagram
         static void Main(string[] args)
         {
             
-            //string path = "";
-            //AnagramFinder Anagram = new AnagramFinder();
+            string path = "";
+            AnagramFinder anagramFinder = new AnagramFinder();
+            anagramFinder.FileReader(path);
             //AnagramFinder(path);
             
             List<List<string>> listOfList = new List<List<string>>();
