@@ -8,6 +8,11 @@ namespace KataAnagram
     {
         static void Main(string[] args)
         {
+            
+            //string path = "";
+            //AnagramFinder Anagram = new AnagramFinder();
+            //AnagramFinder(path);
+            
             List<List<string>> listOfList = new List<List<string>>();
             listOfList.Add(new string[]{"one","two"}.ToList());
             listOfList.Add(new string[]{"3","4"}.ToList());
