@@ -9,10 +9,10 @@ namespace KataAnagram
         static void Main(string[] args)
         {
             
-            string path = "";
+            string path = @"F:\Anagram\words.txt";
+            //string path = "";
             AnagramFinder anagramFinder = new AnagramFinder();
             anagramFinder.FileReader(path);
-            //AnagramFinder(path);
             
             List<List<string>> listOfList = new List<List<string>>();
             listOfList.Add(new string[]{"one","two"}.ToList());
