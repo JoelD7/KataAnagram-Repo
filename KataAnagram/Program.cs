@@ -15,7 +15,7 @@ namespace KataAnagram
             string path = Console.ReadLine();
             Console.WriteLine();
             AnagramFinder anagramFinder = new AnagramFinder();
-            foreach( var x in anagramFinder.FileReader(path))
+            foreach( var x in anagramFinder.FileReader(@path))
             {
                 Console.WriteLine(x); 
             }
