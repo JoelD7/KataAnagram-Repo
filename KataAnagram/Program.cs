@@ -10,7 +10,10 @@ namespace KataAnagram
         {
             
             //FileReader
-            string path = @"F:\Anagram\wordss.txt";
+            //string path = @"F:\Anagram\wordss.txt";
+            Console.Write("Please input the path to the text file with the words: ");
+            string path = Console.ReadLine();
+            Console.WriteLine();
             AnagramFinder anagramFinder = new AnagramFinder();
             foreach( var x in anagramFinder.FileReader(path))
             {
