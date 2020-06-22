@@ -22,7 +22,7 @@ namespace KataAnagram
             }
             catch (Exception e)
             {
-                Console.WriteLine("Please make sure the file in on txt format and it is on the specified route");
+                Console.WriteLine("Please make sure the file is on txt format and it is on the specified route");
                 Console.Write("Please input the correct path: ");
                 AnagramFinder anagramFinder2 = new AnagramFinder();
                 string path = Console.ReadLine();
