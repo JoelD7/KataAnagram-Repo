@@ -8,13 +8,14 @@ namespace KataAnagram
 {
     public class AnagramFinder
     {
-        public string FileReader(string p) 
+        public List<string> FileReader(string p) 
         {
+			List<string> anagramsGroup = new List<string>(null);
 			try
 			{
 				string[] lines = File.ReadAllLines(p, Encoding.UTF8);
 				var MyArrayLower = lines.Select(s => s.ToLowerInvariant()).ToArray();
-				List<string> anagramsGroup = new List<string>(MyArrayLower);
+				anagramsGroup = new List<string>(MyArrayLower);
 
 			}
 			catch (Exception e )
@@ -22,8 +23,8 @@ namespace KataAnagram
 
 				Console.WriteLine("Please make sure the file is on txt format and it is on the specified route");
 			}
-			
-      //return list of words 
-        }
+			return anagramsGroup;
+
+		}
     }
 }
