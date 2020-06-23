@@ -5,7 +5,7 @@ using Xunit;
 
 public class FileReader{
 
-public static List<string> GetWords(){
+public static List<string> GetWordsMock(){
     List<string> words = new List<string>();
      words.Add("tar");
         words.Add("arc");

@@ -6,30 +6,27 @@ using System.Text;
 
 namespace KataAnagram
 {
-    public class AnagramFinder
+    public class FileReader
     {
-        public List<string> FileReader(string p)
+        public List<string> GetWords(string p)
         {
-            List<string> anagramsGroup = new List<string>();
-            //Exception notImplemented = new NotImplementedException();
-            //throw notImplemented;
+            List<string> words = new List<string>();
             try
             {
                 string[] lines = File.ReadAllLines(p, Encoding.UTF8);
                 var MyArrayLower = lines.Select(s => s.ToLowerInvariant()).ToArray();
-                anagramsGroup = new List<string>(MyArrayLower);
-                //anagramsGroup = new List<string>(lines);
+                words = new List<string>(MyArrayLower);
             }
             catch (Exception e)
             {
                 Console.WriteLine("Please make sure the file is on txt format and it is on the specified route");
                 Console.Write("Please input the correct path: ");
-                AnagramFinder anagramFinder2 = new AnagramFinder();
+                FileReader fileReader = new FileReader();
                 string path = Console.ReadLine();
                 Console.WriteLine();
-                return anagramFinder2.FileReader(@path);
+                return fileReader.GetWords(@path);
             }
-            return anagramsGroup;
+            return words;
         }
     }
 }

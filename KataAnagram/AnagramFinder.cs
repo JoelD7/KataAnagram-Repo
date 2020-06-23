@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
+namespace KataAnagram{
 public class AnagramFinder
 {
 
     public List<string> words;
     public List<List<string>> anagramGroups;
+    private FileReader fileReader;
 
     public AnagramFinder(string filename)
     {
-        words = FileReader.GetWords();
+        fileReader = new FileReader();
+        words = fileReader.GetWords(filename);
         anagramGroups = new List<List<string>>();
         IdentifyAnagrams();
     }
@@ -71,6 +74,7 @@ public class AnagramFinder
                 acum++;
             }
         }
+        
         return acum == size;
     }
 
@@ -92,5 +96,7 @@ public class AnagramFinder
         return anagramGroups;
     }
 
+
+}
 
 }
