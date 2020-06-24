@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace KataAnagram
 {
@@ -8,23 +9,26 @@ namespace KataAnagram
     {
         static void Main(string[] args)
         {
-            
-            Console.Write("Please input the path to the text file with the words: ");
-            string path = Console.ReadLine();
-            Console.WriteLine();
-            AnagramFinder anagramFinder = new AnagramFinder(path);
-            
-            
-            List<List<string>> listOfList = anagramFinder.GetAnagramGroups();
-            
 
-            listOfList.ForEach((list)=>{
-                foreach (var item in list)
+            string path = Console.ReadLine();
+            AnagramFinder anagramFinder = new AnagramFinder(path);
+            Show(anagramFinder.GetAnagramGroups());
+        }
+
+
+        static void Show(Dictionary<string, string> d)
+        {
+            foreach (var key in d.Keys)
+            {
+                string val;
+                if (d.TryGetValue(key, out val))
                 {
-                    System.Console.Write("{0}, ", item);
+                    if (val.Contains(","))
+                    {
+                        System.Console.WriteLine(val);
+                    }
                 }
-                System.Console.WriteLine();
-            });
+            }
         }
     }
 }

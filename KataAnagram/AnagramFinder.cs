@@ -1,102 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xunit;
+using System.IO;
 
-namespace KataAnagram{
-public class AnagramFinder
+namespace KataAnagram
 {
-
-    public List<string> words;
-    public List<List<string>> anagramGroups;
-    private FileReader fileReader;
-
-    public AnagramFinder(string filename)
+    public class AnagramFinder
     {
-        fileReader = new FileReader();
-        words = fileReader.GetWords(filename);
-        anagramGroups = new List<List<string>>();
-        IdentifyAnagrams();
-    }
+        private Dictionary<string, string> anagramGroups;
+        private Alphabetizer alphabetizer;
+        private string filename;
 
-    private void IdentifyAnagrams()
-    {
-        foreach (var curWord in words)
+        public AnagramFinder(string filename)
         {
-            List<string> anagrams = new List<string>();
-            foreach (var item in words)
+            anagramGroups = new Dictionary<string, string>();
+            this.filename = filename;
+            alphabetizer = new Alphabetizer();
+            GroupAnagrams();
+
+        }
+        public AnagramFinder()
+        {
+            List<string> list = new List<string>();
+            list.Add("d");
+            list.Add("d");
+        }
+
+        private void GroupAnagrams()
+        {
+            using (StreamReader reader = new StreamReader(filename))
             {
-                if (IsAnagram(curWord, item))
+
+                string curWord = reader.ReadLine();
+                while (curWord != null)
                 {
-                    if (!IsIncluded(item))
+
+                    string key = alphabetizer.Alphabetize(curWord);
+                    string value;
+                    if (anagramGroups.TryGetValue(key, out value))
                     {
-                        anagrams.Add(item);
+                        anagramGroups[key] = value + ", " + curWord;
                     }
+                    else
+                    {
+                        anagramGroups.Add(key, curWord);
+                    }
+                    curWord = reader.ReadLine();
                 }
-
-            }
-            if (anagrams.LongCount() > 1)
-            {
-                anagramGroups.Add(anagrams);
             }
         }
-    }
 
-    private bool IsIncluded(string word)
-    {
-        bool included = false;
-        anagramGroups.ForEach(list =>
-        {
-            if (list.Contains(word))
-            {
-                included = true;
-            }
-        });
-        return included;
-    }
-
-    private bool IsAnagram(string word, string word2)
-    {
-        if (word.Length != word2.Length)
-        {
-            return false;
+        public Dictionary<string, string> GetAnagramGroups(){
+            return anagramGroups;
         }
-
-        int size = word.Length;
-        int acum = 0;
-
-        List<char> list = word.ToCharArray().ToList();
-        for (int i = 0; i < list.LongCount(); i++)
-        {
-            char ch = list.ElementAt(i);
-            if (HasChar(word2, ch))
-            {
-                acum++;
-            }
-        }
-        
-        return acum == size;
     }
-
-    private bool HasChar(string s, char c)
-    {
-        bool has = false;
-        s.ToCharArray().ToList().ForEach(ch =>
-        {
-            if (ch == c)
-            {
-                has = true;
-            }
-        });
-        return has;
-    }
-
-    public List<List<string>> GetAnagramGroups()
-    {
-        return anagramGroups;
-    }
-
-
-}
-
 }

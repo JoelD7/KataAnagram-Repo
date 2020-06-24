@@ -1,8 +1,13 @@
 # Resolucion de Kata Anagram
 - El programa consta de 3 clases:
-    - **FileReader**: lee el archivo de palabras y las suministra a AnagramFinder.
+    - **Alphabetizer**: toma una palabra y la retorna con sus caracteres ordenados alfabeticamente.
     - **AnagramFinder**: analiza todas las palabras, identifica los anagramas y los agrupa. 
     - **Program**: pide el nombre del archivo a inspeccionar e imprime los grupos de anagramas. 
+
+# Para ejecutar programa
+- Se debe indicar un archivo en donde el cual el programa escribira los grupos de anagramas: outputFile.
+- Ir al directorio en donde se encuentra la aplicacion 
+- Ejecutar: dotnet run > [outputFile]
 
 # IDs y nombres:
 - Raúl Sánchez - 1086070
