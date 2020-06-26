@@ -6,7 +6,7 @@ state
 elbow
 taste
 cried
-cider 
+cider
 dusty
 pairs
 chin
