@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace KataAnagram {
-    public class AnagramFinder {
+namespace KataAnagram
+{
+    public class AnagramFinder
+    {
         private Dictionary<string, string> anagramGroups;
         private AlphabetizerMock alphabetizer;
         private string filename;
@@ -12,34 +14,42 @@ namespace KataAnagram {
         private string longestAnagrams = "";
         private List<string> greaterSet;
 
-        public AnagramFinder (string filename) {
-            anagramGroups = new Dictionary<string, string> ();
+        public AnagramFinder(string filename)
+        {
+            anagramGroups = new Dictionary<string, string>();
             greaterSet = new List<string>();
             this.filename = filename;
-            alphabetizer = new AlphabetizerMock ();
-            GroupAnagrams ();
+            alphabetizer = new AlphabetizerMock();
+            GroupAnagrams();
 
         }
-        public AnagramFinder (List<string> list) {
+        public AnagramFinder(List<string> list)
+        {
             this.list = list;
         }
 
-        private void GroupAnagrams () {
-            using (StreamReader reader = new StreamReader (filename)) {
+        private void GroupAnagrams()
+        {
+            using (StreamReader reader = new StreamReader(filename))
+            {
 
-                string curWord = reader.ReadLine ();
-                while (curWord != null) {
+                string curWord = reader.ReadLine();
+                while (curWord != null)
+                {
 
-                    string key = alphabetizer.Alphabetize (curWord);
-                    
+                    string key = alphabetizer.Alphabetize(curWord);
+
                     string value;
-                    if (anagramGroups.TryGetValue (key, out value)) {
+                    if (anagramGroups.TryGetValue(key, out value))
+                    {
                         longestAnagrams = key.Length > longestAnagrams.Length ? key : longestAnagrams;
                         anagramGroups[key] = value + ", " + curWord;
-                    } else {
-                        anagramGroups.Add (key, curWord);
                     }
-                    curWord = reader.ReadLine ();
+                    else
+                    {
+                        anagramGroups.Add(key, curWord);
+                    }
+                    curWord = reader.ReadLine();
                 }
             }
         }
@@ -63,10 +73,12 @@ namespace KataAnagram {
         //     }
         // }
 
-        public Dictionary<string, string> GetAnagramGroups () {
-            return anagramGroups;
+        public Dictionary<string, string> GetAnagramGroups()
+        {
+            return anagramGroups.Where(kvp => kvp.Value.Contains(",")).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         }
-        public string GetLongestAnagrams(){
+        public string GetLongestAnagrams()
+        {
             return anagramGroups[longestAnagrams];
         }
     }

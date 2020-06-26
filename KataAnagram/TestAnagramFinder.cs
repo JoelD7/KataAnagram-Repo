@@ -29,6 +29,7 @@ namespace KataAnagram
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
         public void TestLongestAnagrams(){
             AnagramFinder anagram = new AnagramFinder(list);
             string expected = "stressed, desserts";
