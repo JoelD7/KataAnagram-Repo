@@ -8,6 +8,10 @@ namespace KataAnagram
 {
     public class Alphabetizer
     {
+        public Alphabetizer()
+        {
+            
+        }
         public string Alphabetize(string word)
         {
             word = word.ToLower();
