@@ -3,6 +3,10 @@
     - **Alphabetizer**: toma una palabra y la retorna con sus caracteres ordenados alfabeticamente.
     - **AnagramFinder**: analiza todas las palabras, identifica los anagramas y los agrupa. 
     - **Program**: pide el nombre del archivo a inspeccionar e imprime los grupos de anagramas. 
+    
+# Videos del TDD
+- TDD - AnagramFinder https://youtu.be/7SiD8Mbiilw
+- TDD - Alphabetizer & Show https://youtu.be/KIm_3FU07CM
 
 # Para ejecutar programa
 - Se debe indicar un archivo en donde el cual el programa escribira los grupos de anagramas: outputFile.
