@@ -8,7 +8,7 @@ namespace KataAnagram
     public class AnagramFinder
     {
         public List<string> list = new List<string>();
-        private AlphabetizerMock alphabetizer;
+        private Alphabetizer alphabetizer;
         private string longestAnagram;
         private Dictionary<string, string> anagramGroups;
 
@@ -17,7 +17,7 @@ namespace KataAnagram
             this.list = list;
             longestAnagram = "";
             anagramGroups = new Dictionary<string, string>();
-            alphabetizer = new AlphabetizerMock();
+            alphabetizer = new Alphabetizer();
             GroupAnagrams();
         }
 
