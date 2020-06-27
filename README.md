@@ -7,6 +7,7 @@
 # Videos del TDD
 - TDD - AnagramFinder https://youtu.be/7SiD8Mbiilw
 - TDD - Alphabetizer & Show https://youtu.be/KIm_3FU07CM
+- Integración de ambos módulos: https://youtu.be/IKhPtmFu8RE?list=PLt0gBb90BZq94nh9onGAAJ7oktFmPbJWf
 
 # Para ejecutar programa
 - Se debe indicar un archivo en donde el cual el programa escribira los grupos de anagramas: outputFile.
