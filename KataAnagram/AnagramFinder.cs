@@ -52,6 +52,24 @@ namespace KataAnagram
                 }
             }
         }
+        // private void GroupAnagrams()
+        // {
+        //     string curWord;
+        //     for (int i = 0; i < list.LongCount(); i++)
+        //     {
+        //         curWord = list[i];
+        //         string key = alphabetizer.Alphabetize(curWord);
+        //         string value;
+        //         if (anagramGroups.TryGetValue(key, out value))
+        //         {
+        //             anagramGroups[key] = value + ", " + curWord;
+        //         }
+        //         else
+        //         {
+        //             anagramGroups.Add(key, curWord);
+        //         }
+        //     }
+        // }
 
         public string GetLongestAnagrams()
         {
