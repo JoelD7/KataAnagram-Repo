@@ -5,14 +5,18 @@
     - **Program**: pide el nombre del archivo a inspeccionar e imprime los grupos de anagramas. 
     
 # Videos del TDD
-- TDD - AnagramFinder https://youtu.be/7SiD8Mbiilw
-- TDD - Alphabetizer & Show https://youtu.be/KIm_3FU07CM
+- TDD - AnagramFinder: https://youtu.be/7SiD8Mbiilw
+- TDD - Alphabetizer & Show: https://youtu.be/KIm_3FU07CM
 - Integración de ambos módulos: https://youtu.be/IKhPtmFu8RE?list=PLt0gBb90BZq94nh9onGAAJ7oktFmPbJWf
 
 # Para ejecutar programa
-- Se debe indicar un archivo en donde el cual el programa escribira los grupos de anagramas: outputFile.
-- Ir al directorio en donde se encuentra la aplicacion 
-- Ejecutar: dotnet run > [outputFile]
+1) Se debe indicar un archivo en donde el cual el programa escribira los grupos de anagramas: outputFile.
+2) Ir al directorio en donde se encuentra la aplicacion 
+3) Ejecutar: `.\KataAnagram.exe > [outputFile]`
+4) Presionar ENTER
+5) Escribir nombre del archivo que contiene el listado de palabras. 
+6) Abrir [outputFile] para ver el resultado. 
+    - **Nota**: Ir a las ultimas dos lineas de este archivo para ver los grupos de anagramas con mayor cantidad de palabras y con las palabras mas largas.  
 
 # IDs y nombres:
 - Raúl Sánchez - 1086070
