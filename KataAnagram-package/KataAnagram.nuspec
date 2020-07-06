@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>kataAnagram</id>
+    <title>KataAnagram</title>
+    <version>0.1.0.20203006</version>
+    <authors> Raul Sanchez </authors>
+    <owners>Raul Sanchez </owners>
+    <summary>This application calculates all the possible anagrams within a text file</summary>
+    <description>It follows the instructions of a Kata</description>
+    <projectUrl>https://github.com/JoelD7/KataAnagram-Repo </projectUrl>
+    <tags>kata anagrams words</tags>
+    <licenseUrl>https://github.com/JoelD7/KataAnagram-Repo </licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+    <iconUrl>https://live.staticflickr.com/8067/8261173759_c2a53f2453_b.jpg</iconUrl>
+  </metadata>
+</package>
