@@ -12,9 +12,9 @@
 # Para ejecutar programa
 1) Ir al directorio en donde se encuentra la aplicacion 
 2) Ejecutar: `.\KataAnagram.exe`
-3) Presionar ENTER
 5) Escribir nombre del archivo que contiene el listado de palabras(*input file*).
 1) Escribir nombre del archivo en el que se mostraran los resultados(*output file*).
+3) Presionar `ENTER`. La ventana se cerrrará inmediatamente. 
 6) Abrir *output file* para ver el resultado. 
     - **Nota**: Ir a las ultimas dos lineas de este archivo para ver los grupos de anagramas con mayor cantidad de palabras y con las palabras mas largas.  
 
