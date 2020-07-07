@@ -10,12 +10,12 @@
 - Integración de ambos módulos: https://youtu.be/IKhPtmFu8RE?list=PLt0gBb90BZq94nh9onGAAJ7oktFmPbJWf
 
 # Para ejecutar programa
-1) Se debe indicar un archivo en donde el cual el programa escribira los grupos de anagramas: outputFile.
-2) Ir al directorio en donde se encuentra la aplicacion 
-3) Ejecutar: `.\KataAnagram.exe > [outputFile]`
-4) Presionar ENTER
-5) Escribir nombre del archivo que contiene el listado de palabras. 
-6) Abrir [outputFile] para ver el resultado. 
+1) Ir al directorio en donde se encuentra la aplicacion 
+2) Ejecutar: `.\KataAnagram.exe`
+3) Presionar ENTER
+5) Escribir nombre del archivo que contiene el listado de palabras(*input file*).
+1) Escribir nombre del archivo en el que se mostraran los resultados(*output file*).
+6) Abrir *output file* para ver el resultado. 
     - **Nota**: Ir a las ultimas dos lineas de este archivo para ver los grupos de anagramas con mayor cantidad de palabras y con las palabras mas largas.  
 
 # IDs y nombres:
